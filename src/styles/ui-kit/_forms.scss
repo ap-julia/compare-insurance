@@ -3,66 +3,53 @@
 // =============================================================================
 
 .form {
-  background-color: aquamarine;
+  width: 100%;
+  max-width: 564px;
+  margin: 0 auto;
+  padding: 40px 100px 50px;
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: $boxShadow;
 
   &__container {
-    //@include make-container();
+    @include make-container();
   }
 
   &__row {
     @include make-row();
+
+    margin-bottom: 32px;
   }
 
   &__col {
     @include make-col-ready();
   }
-}
 
-// =============================================================================
-// Form elements
-// =============================================================================
-
-%field-text {
-  display: block;
-  width: 100%;
-  padding: 5px 10px;
-  border: 1px solid silver;
-  resize: none;
-}
-
-@include placeholder {
-  color: $black;
-  font-family: $secure-fonts;
-  font-style: italic;
-}
-
-.form-field {
-  flex-grow: 1;
-  color: $black;
-  font-family: $secure-fonts;
-
-  &__text {
-    @extend %field-text;
+  &__heading {
+    color: $darkSlateBlue;
+    font-size: 24px;
+    font-family: $font-montserrat-bold;
+    letter-spacing: 0.21px;
   }
 
-  &__checkbox {
-
+  &__content {
+    margin-top: 24px;
   }
 
-  &__radio {
-
+  &__title {
+    margin-bottom: 8px;
+    color: $darkSlateBlue;
+    font-size: 16px;
+    font-family: $font-openSans-regular;
+    line-height: 1.5;
+    letter-spacing: 0.14px;
   }
 
-  &__label {
-    display: inline-block;
-    margin-bottom: 5px;
-  }
+  &__multiple-item {
+    margin-right: 16px;
 
-  &__placeholder {
-
-  }
-
-  &__message {
-
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

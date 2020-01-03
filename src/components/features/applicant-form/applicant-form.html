@@ -1,0 +1,60 @@
+<div class="form">
+  <div class="form__container">
+    <h3 class="form__heading">About the applicant</h3>
+    <form class="form__content">
+      <div class="form__row">
+        <h5 class="form__title">What is the Applicant’s gender?</h5>
+        <div class="radio-button form__multiple-item">
+          <input id="male" type="radio" value="male" name="gender" checked>
+          <label for="male">
+            <span>Male</span>
+            <svg class="radio-button__icon">
+              <use xlink:href="#check"/>
+            </svg>
+          </label>
+        </div>
+        <div class="radio-button">
+          <input id="female" type="radio" value="female" name="gender">
+          <label for="female">
+            <span>Female</span>
+            <svg class="radio-button__icon">
+              <use xlink:href="#check"/>
+            </svg>
+          </label>
+        </div>
+      </div>
+      <div class="form__row">
+        <h5 class="form__title">What is the Applicant’s date of birth?</h5>
+        <select class="form__multiple-item input" name="day">
+          <option disabled selected>Day</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+        </select>
+        <select class="form__multiple-item input" name="month">
+          <option disabled selected >Month</option>
+          <option>September</option>
+          <option>October</option>
+          <option>December</option>
+        </select>
+        <select class="form__multiple-item input" name="year">
+          <option disabled selected>Year</option>
+          <option>2000</option>
+          <option>2002</option>
+          <option>2003</option>
+        </select>
+      </div>
+      <div class="form__row">
+        <h5 class="form__title">What is the Applicant’s visa emirate?</h5>
+        <select class="input input--block" name="visa">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 2</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--block">
+        Next
+      </button>
+    </form>
+  </div>
+</div>

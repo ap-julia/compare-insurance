@@ -3,7 +3,6 @@
 
   width: 100%;
   min-height: 50px;
-  background-color: silver;
 
   &__list {
     display: flex;
@@ -19,6 +18,10 @@
     flex-grow: 1;
     justify-content: center;
     min-height: inherit;
+    color: $battleshipGrey;
+    font-size: 12px;
+    font-family: $font-montserrat-semi;
+    text-transform: uppercase;
   }
 
   &__link {
@@ -27,6 +30,7 @@
     align-items: center;
     justify-content: center;
     min-height: inherit;
+    color: inherit;
     text-decoration: none;
 
     &:hover {
@@ -35,6 +39,7 @@
 
     &--is-current,
     &--is-current:hover {
+      //TODO
       font-weight: bold;
       text-decoration: none;
     }

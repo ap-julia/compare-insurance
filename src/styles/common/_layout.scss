@@ -11,8 +11,6 @@
   &__add,
   &__base-wrap-outer {
     @include make-container();
-    //@include make-container-with-layout-gutter();
-    //@include make-container-max-widths();
   }
 
   &__base-wrap-outer {
@@ -20,8 +18,7 @@
   }
 
   &__base,
-  &__base-wrap-outer,
-  &__section {
+  &__base-wrap-outer {
     display: flex;
     flex-grow: 1;
   }
@@ -37,23 +34,14 @@
   }
 
   &__main,
-  &__sidebar-primary,
-  &__sidebar-secondary {
+  &__sidebar-primary {
     @include make-col-ready();
 
     flex-grow: 1;
   }
 
   &__sidebar-primary {
-    @include make-col-fix(300px);
-
-    @include media-breakpoint-down(lg) {
-      @include make-col(100, 100);
-    }
-  }
-
-  &__sidebar-secondary {
-    @include make-col(30, 100);
+    @include make-col-fix(250px);
 
     @include media-breakpoint-down(lg) {
       @include make-col(100, 100);
@@ -73,6 +61,7 @@
   }
 
   &__section {
+    display: flex;
     min-height: auto;
   }
 

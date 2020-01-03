@@ -1,0 +1,20 @@
+.input {
+  display: inline-block;
+  height: 40px;
+  padding: 8px 16px;
+  color: $battleshipGrey;
+  font-size: 14px;
+  font-family: $font-openSans-regular;
+  background-color: $white;
+  border: solid 1px $silver;
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $blue;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
