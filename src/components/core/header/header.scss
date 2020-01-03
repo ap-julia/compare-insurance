@@ -19,6 +19,10 @@
     @include make-row();
 
     min-height: inherit;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: space-between;
+    }
   }
 
   &__col {
@@ -52,6 +56,8 @@
 
       @include media-breakpoint-down(sm) {
         order: 1;
+
+        @include make-col-fix(40);
       }
     }
 
@@ -73,10 +79,10 @@
   }
 
   &__menu {
-
     width: 100%;
+
     @include media-breakpoint-down(sm) {
-      display: none;
+      width: auto;
     }
   }
 

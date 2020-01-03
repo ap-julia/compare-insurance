@@ -8,7 +8,9 @@ $black: #000;
 $blue: #97aff3;
 $silver: #c5c8cd;
 $paleGrey: #f6f7fb;
+$dullBlue: #506aa6;
 $limeGreen: #00a00d;
+$lightNavy: #13295c;
 $darkSlateBlue: #192959;
 $battleshipGrey: #6b7382;
 
@@ -18,6 +20,7 @@ $boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 // Fonts
 $secure-fonts: Arial, Helvetica, Sans-serif;
 $font-montserrat-regular: Montserrat-Regular, $secure-fonts;
+$font-montserrat-medium: Montserrat-Medium, $secure-fonts;
 $font-montserrat-semi: Montserrat-SemiBold, $secure-fonts;
 $font-montserrat-bold: Montserrat-Bold, $secure-fonts;
 $font-openSans-regular: OpenSans-Regular, $secure-fonts;
@@ -54,18 +57,9 @@ $grid-breakpoints: (
   xl: 1400px
 );
 
-//TODO: REMOVE
-//$grid-breakpoints: (
-//  xs: 0,
-//  sm: 576px,
-//  md: 768px,
-//  lg: 992px,
-//  xl: 1200px
-//);
-
 // Responsive version
 $container-max-widths: (
-  xs: 0,
+  xs: 96%,
   sm: 96%,
   md: 96%,
   lg: 96%,

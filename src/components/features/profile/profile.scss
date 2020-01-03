@@ -4,8 +4,11 @@
   position: relative;
   display: block;
   width: 100%;
+  min-width: 24px;
+  min-height: 24px;
   padding-bottom: 100%;
   overflow: hidden;
+  background: $silver;
   border-radius: 50%;
 
   &__img {

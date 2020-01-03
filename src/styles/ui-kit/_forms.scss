@@ -11,6 +11,12 @@
   border-radius: 3px;
   box-shadow: $boxShadow;
 
+  @include media-breakpoint-down(xs) {
+    padding: 16px;
+    background-color: initial;
+    box-shadow: initial;
+  }
+
   &__container {
     @include make-container();
   }

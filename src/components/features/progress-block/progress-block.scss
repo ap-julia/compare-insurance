@@ -6,6 +6,11 @@
   border-radius: 3px;
   box-shadow: $boxShadow;
 
+  @include media-breakpoint-down(xs) {
+    background-color: initial;
+    box-shadow: initial;
+  }
+
   &__heading {
     margin: 0 0 24px;
     color: $darkSlateBlue;
@@ -19,15 +24,17 @@
     align-items: center;
     justify-content: space-between;
     width: auto;
-    max-width: 75%;
   }
 
   &__item {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 23%;
 
     &-mark {
       display: flex;
+      flex-shrink: 0;
       align-items: center;
       justify-content: center;
       width: 24px;
@@ -77,5 +84,4 @@
       }
     }
   }
-
 }

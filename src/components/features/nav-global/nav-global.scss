@@ -4,6 +4,10 @@
   width: 100%;
   min-height: 50px;
 
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -22,6 +26,24 @@
     font-size: 12px;
     font-family: $font-montserrat-semi;
     text-transform: uppercase;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: none;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__link {
@@ -59,8 +81,72 @@
     }
 
     #{$root}__link {
-      display: block;
+      display: flex;
       min-height: auto;
+    }
+  }
+
+  &--mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: block !important;
+    width: 75%;
+    padding: 20% 24px 24px;
+    background-color: $lightNavy;
+  }
+
+  &--mobile & {
+
+    &__close {
+      display: block;
+    }
+
+    &__icon {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-right: 14px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $dullBlue;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 24px;
+      color: $dullBlue;
+      font-size: 14px;
+      font-family: $font-montserrat-medium;
+      line-height: 1.71;
+      letter-spacing: 0.13px;
+      text-transform: initial;
+
+      &:hover {
+        color: $white;
+        text-decoration: initial;
+
+        svg {
+          fill: $white;
+        }
+      }
+
+      &--is-current,
+      &--is-current:hover {
+        color: $white;
+        font-weight: initial;
+
+        svg {
+          fill: $white;
+        }
+      }
     }
   }
 }
