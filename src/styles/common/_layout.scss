@@ -43,8 +43,8 @@
   &__sidebar-primary {
     @include make-col-fix(250px);
 
-    @include media-breakpoint-down(lg) {
-      @include make-col(100, 100);
+    @include media-breakpoint-down(md) {
+      display: none;
     }
   }
 

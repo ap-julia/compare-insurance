@@ -39,3 +39,15 @@ ol {
   font-family: inherit;
   line-height: normal;
 }
+
+.h5 {
+  color: $battleshipGrey;
+  font-size: 14px;
+  font-family: $font-montserrat-semi;
+  line-height: 1.71;
+  letter-spacing: 0.13px;
+
+  &--primary {
+    color: $darkSlateBlue;
+  }
+}

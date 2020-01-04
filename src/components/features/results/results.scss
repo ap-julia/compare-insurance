@@ -1,0 +1,32 @@
+.results {
+  $root: &;
+
+  padding: 8px 24px;
+
+  &__title {
+    display: flex;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      margin-right: 32px;
+    }
+  }
+
+  &__content {
+    padding-top: 16px;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+  }
+}

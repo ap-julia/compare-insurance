@@ -1,0 +1,15 @@
+.filters-form {
+  &__row {
+    @include make-row();
+
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+}

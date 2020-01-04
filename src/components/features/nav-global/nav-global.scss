@@ -93,7 +93,7 @@
     left: 0;
     z-index: 10;
     display: block !important;
-    width: 75%;
+    min-width: 75%;
     padding: 20% 24px 24px;
     background-color: $lightNavy;
   }
