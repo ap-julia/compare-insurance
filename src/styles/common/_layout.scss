@@ -41,9 +41,9 @@
   }
 
   &__sidebar-primary {
-    @include make-col-fix(250px);
+    @include make-col-fix(265px);
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       display: none;
     }
   }

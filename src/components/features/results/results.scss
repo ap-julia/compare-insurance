@@ -1,7 +1,11 @@
 .results {
   $root: &;
 
-  padding: 8px 24px;
+  padding: 8px 0 8px 24px;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 0;
+  }
 
   &__title {
     display: flex;
