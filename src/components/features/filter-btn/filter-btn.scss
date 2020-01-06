@@ -21,6 +21,14 @@
     display: none;
   }
 
+  @include media-breakpoint-down(xs) {
+    min-width: 140px;
+    height: 32px;
+    margin-left: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
   &__svg {
     width: 24px;
     height: 24px;
