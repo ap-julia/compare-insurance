@@ -9,12 +9,20 @@
 
   &__title {
     display: flex;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
 
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include media-breakpoint-down(xs) {
+      justify-content: flex-end;
+    }
   }
 
   &__filter {
@@ -23,6 +31,10 @@
 
     &-title {
       margin-right: 32px;
+
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
     }
   }
 

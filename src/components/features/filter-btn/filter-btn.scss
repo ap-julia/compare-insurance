@@ -1,0 +1,23 @@
+.filter-btn {
+  $root: &;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  height: 40px;
+  margin-left: 16px;
+  color: $battleshipGrey;
+  font-size: 14px;
+  font-family: $font-openSans-regular;
+  line-height: 1.43;
+  letter-spacing: 0.13px;
+  background-color: $white;
+  border: solid 1px $silver;
+  border-radius: 4px;
+
+  &__svg {
+    width: 16px;
+    height: 16px;
+  }
+}
