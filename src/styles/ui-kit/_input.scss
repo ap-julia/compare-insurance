@@ -11,6 +11,7 @@
   border: solid 1px $silver;
   border-radius: 4px;
   outline: none;
+  -webkit-appearance: none;
 
   @include media-breakpoint-down(xs) {
     height: 32px;
