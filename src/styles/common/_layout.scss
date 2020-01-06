@@ -43,6 +43,8 @@
   &__sidebar-primary {
     @include make-col-fix(265px);
 
+    max-height: 770px;
+
     @include media-breakpoint-down(lg) {
       display: none;
     }

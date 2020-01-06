@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+<svg fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+      viewBox="0 0 16 16">
     <defs>
         <path id="b" d="M19.375 11.375h-6.75v-6.75a.625.625 0 1 0-1.25 0v6.75h-6.75a.625.625 0 1 0 0 1.25h6.75v6.75a.625.625 0 1 0 1.25 0v-6.75h6.75a.625.625 0 1 0 0-1.25z"/>
         <filter id="a" width="1143.8%" height="1143.8%" x="-521.9%" y="-415.6%" filterUnits="objectBoundingBox">
@@ -14,8 +15,8 @@
             </feMerge>
         </filter>
     </defs>
-    <g fill="none" fill-rule="evenodd" transform="rotate(45 14.828 5.172)">
-        <use fill="#000" filter="url(#a)" xlink:href="#b"/>
-        <use fill="#FFF" xlink:href="#b"/>
+    <g fill-rule="evenodd" transform="rotate(45 14.828 5.172)">
+        <use filter="url(#a)" xlink:href="#b"/>
+        <use xlink:href="#b"/>
     </g>
 </svg>

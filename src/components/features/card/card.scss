@@ -49,7 +49,7 @@
         max-width: 15%;
       }
 
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-down(xxs) {
         max-width: 35%;
       }
     }

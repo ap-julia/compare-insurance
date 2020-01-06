@@ -19,4 +19,13 @@
   $('.card__details-title').on( "click", function( event ) {
     $(event.target).siblings().toggleClass('open');
   });
+
+  //toggle filter popup
+
+  $('.js-filter-button').on( "click", function( event ) {
+    $(event.target).addClass('open');
+  });
+  $('.js-filter-close').on( "click", function( event ) {
+    $('.js-filter-button').removeClass('open');
+  });
 })(jQuery);

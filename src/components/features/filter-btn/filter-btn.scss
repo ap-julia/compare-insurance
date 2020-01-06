@@ -1,6 +1,7 @@
 .filter-btn {
   $root: &;
 
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +17,44 @@
   border: solid 1px $silver;
   border-radius: 4px;
 
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+
   &__svg {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+  }
+
+  &__content {
+    position: absolute;
+    top: 24px;
+    right: 50%;
+    z-index: 10;
+    display: none;
+    min-width: 280px;
+    padding: 36px 24px 24px;
+    background-color: $white;
+    box-shadow: $boxShadow;
+
+    @include media-breakpoint-down(xs) {
+      right: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    fill: $battleshipGrey;
+  }
+
+  &.open {
+    .filter-btn__content {
+      display: block;
+    }
   }
 }
