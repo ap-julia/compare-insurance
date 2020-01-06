@@ -24,6 +24,7 @@ $font-montserrat-medium: Montserrat-Medium, $secure-fonts;
 $font-montserrat-semi: Montserrat-SemiBold, $secure-fonts;
 $font-montserrat-bold: Montserrat-Bold, $secure-fonts;
 $font-openSans-regular: OpenSans-Regular, $secure-fonts;
+$font-openSans-semi: OpenSans-SemiBold, $secure-fonts;
 $default-font-size: 16px;
 
 // =============================================================================
@@ -60,8 +61,8 @@ $grid-breakpoints: (
 
 // Responsive version
 $container-max-widths: (
-  xxs: 96%,
-  xs: 96%,
+  xxs: 92%,
+  xs: 92%,
   sm: 96%,
   md: 96%,
   lg: 96%,

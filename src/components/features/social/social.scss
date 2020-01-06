@@ -11,9 +11,14 @@
     display: inline-block;
     margin-right: 32px;
     vertical-align: top;
+    transition: 0.3s opacity;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 0.6;
     }
   }
 

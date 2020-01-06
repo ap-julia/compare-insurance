@@ -79,109 +79,105 @@
       </div>
     </div>
     <div class="card__more">
-      <button class="card__more-button js-card-button">
-        <span>View Details</span>
-        <svg class="card__more-svg">
-          <use xlink:href="#arrow"/>
-        </svg>
-      </button>
+      @include('components/features/more-btn/more-btn.html')
     </div>
   </div>
-    <div class="card__details">
-      <h3 class="card__details-heading">Summary</h3>
-      <div class="card__details-content">
-        <div class="card__details-row">
-          <div class="card__details-col">Plan Name</div>
-          <div class="card__details-col">Health Perfect 7</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Yearly Cover</div>
-          <div class="card__details-col">AED 1000000</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Coverage</div>
-          <div class="card__details-col">Worldwide</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Deductible</div>
-          <div class="card__details-col">AED 50 per out-patient consultation</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Dental Cover</div>
-          <div class="card__details-col">Up to AED 2,000 with pre-authorization & 20% co-pay on direct billing (additional 20% co-payment on reimbursement)</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Emirate</div>
-          <div class="card__details-col">Abu Dhabi; Al Ain</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Hospital Accommodation</div>
-          <div class="card__details-col">Private Room with pre-authorization</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Prescription Drugs</div>
-          <div class="card__details-col">Covered; pre-authorization required for in-patient treatment & cost above AED 500 for out-patient treatment</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Hospital Cash Benefit</div>
-          <div class="card__details-col">Covered</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Parent Accommodation</div>
-          <div class="card__details-col">Covered with pre-authorization</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Ambulance Cover</div>
-          <div class="card__details-col">Covered for in-patient treatment with pre-authorization</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Coverage Outside Cover Area</div>
-          <div class="card__details-col">Covered</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Treatment Outside Network</div>
-          <div class="card__details-col">For elective treatment 80% of covered cost (100% for South-East Asia) subject to network rates on reimbursement basis</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Pre Existing Conditions</div>
-          <div class="card__details-col">Covered up to AED 150,000 (with chronic conditions)</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Chronic Condition</div>
-          <div class="card__details-col">Covered up to AED 150,000 (with pre-existing conditions)</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Pregnancy Cover</div>
-          <div class="card__details-col">Covered with 10% co-pay on out-patient maternity treatment; up to AED 10,000 for normal delivery and up to AED 10,000 for medically essential C-section & complications; preauthorization required for in-patient treatment</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">New Born Baby Cover</div>
-          <div class="card__details-col">Covered up to AED 150,000 for 30 days from birth; preauthorization required for in-patient treatment</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Natal Complications</div>
-          <div class="card__details-col">Covered with 10% co-pay; pre-authorization required for inpatient treatment</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Vaccination</div>
-          <div class="card__details-col">Covered for children up to 6 years with pre-authorization & 10% co-pay</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Psychiatric Treatment</div>
-          <div class="card__details-col">Covered for emergency mental health treatments; 10% co-pay for out-patient treatment</div>
-        </div>
-        <div class="card__details-row">
-          <div class="card__details-col">Accidental Damage To Teeth</div>
-          <div class="card__details-col">Covered if treated within 3 months; 10% co-pay</div>
-        </div>
+  <div class="card__details js-card-details">
+    <h3 class="card__details-heading">Summary</h3>
+    <div class="card__details-content">
+      <div class="card__details-row">
+        <div class="card__details-title">Plan Name</div>
+        <div class="card__details-text">Health Perfect 7</div>
       </div>
-      <div class="card__more">
-        <button class="card__more-button js-card-button">
-          <span>View Details</span>
-          <svg class="card__more-svg">
-            <use xlink:href="#arrow"/>
-          </svg>
-        </button>
+      <div class="card__details-row">
+        <div class="card__details-title">Yearly Cover</div>
+        <div class="card__details-text">AED 1000000</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Coverage</div>
+        <div class="card__details-text">Worldwide</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Deductible</div>
+        <div class="card__details-text">AED 50 per out-patient consultation</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Dental Cover</div>
+        <div class="card__details-text">Up to AED 2,000 with pre-authorization & 20% co-pay on direct billing
+                                     (additional 20% co-payment on reimbursement)</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Emirate</div>
+        <div class="card__details-text">Abu Dhabi; Al Ain</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Hospital Accommodation</div>
+        <div class="card__details-text">Private Room with pre-authorization</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Prescription Drugs</div>
+        <div class="card__details-text">Covered; pre-authorization required for in-patient treatment & cost above AED
+                                     500 for out-patient treatment</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Hospital Cash Benefit</div>
+        <div class="card__details-text">Covered</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Parent Accommodation</div>
+        <div class="card__details-text">Covered with pre-authorization</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Ambulance Cover</div>
+        <div class="card__details-text">Covered for in-patient treatment with pre-authorization</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Coverage Outside Cover Area</div>
+        <div class="card__details-text">Covered</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Treatment Outside Network</div>
+        <div class="card__details-text">For elective treatment 80% of covered cost (100% for South-East Asia) subject to network rates on reimbursement basis</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Pre Existing Conditions</div>
+        <div class="card__details-text">Covered up to AED 150,000 (with chronic conditions)</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Chronic Condition</div>
+        <div class="card__details-text">Covered up to AED 150,000 (with pre-existing conditions)</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Pregnancy Cover</div>
+        <div class="card__details-text">Covered with 10% co-pay on out-patient maternity treatment; up to AED 10,000 for
+                                     normal delivery and up to AED 10,000 for medically essential C-section & complications; preauthorization required for in-patient treatment</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">New Born Baby Cover</div>
+        <div class="card__details-text">Covered up to AED 150,000 for 30 days from birth; preauthorization required for
+                                     in-patient treatment</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Natal Complications</div>
+        <div class="card__details-text">Covered with 10% co-pay; pre-authorization required for inpatient
+                                        treatment</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Vaccination</div>
+        <div class="card__details-text">Covered for children up to 6 years with pre-authorization & 10% co-pay</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Psychiatric Treatment</div>
+        <div class="card__details-text">Covered for emergency mental health treatments; 10% co-pay for out-patient
+                                    treatment</div>
+      </div>
+      <div class="card__details-row">
+        <div class="card__details-title">Accidental Damage To Teeth</div>
+        <div class="card__details-text">Covered if treated within 3 months; 10% co-pay</div>
       </div>
     </div>
+    <div class="card__more">
+      @include('components/features/more-btn/more-btn.html')
+    </div>
+  </div>
 </div>

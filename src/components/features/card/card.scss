@@ -17,6 +17,10 @@
         flex-direction: column;
         align-items: center;
       }
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
     }
   }
 
@@ -81,7 +85,13 @@
 
       flex-direction: row;
       justify-content: space-between;
-      border-bottom: 1px solid #e7e7e9;
+    }
+
+    &:not(:last-child) {
+
+      @include media-breakpoint-down(xs) {
+        border-bottom: 1px solid #e7e7e9;
+      }
     }
 
     &:not(:last-child)::before {
@@ -118,6 +128,7 @@
   &__val {
     @include media-breakpoint-down(xs) {
       flex-grow: 1;
+      font-size: 12px;
       text-align: left;
     }
   }
@@ -143,7 +154,6 @@
   }
 
   &__action {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,29 +184,23 @@
     align-items: center;
     justify-content: center;
     padding: 12px 0;
-
-    &-button {
-      display: flex;
-      align-items: center;
-      color: $blue;
-      font-size: 10px;
-      font-family: $font-montserrat-bold;
-      line-height: 1.2;
-      letter-spacing: 0.09px;
-      background-color: transparent;
-      border: none;
-      outline: none;
-    }
-
-    &-svg {
-      width: 16px;
-      height: 16px;
-    }
   }
 
   &__details {
-
+    display: none;
     padding: 0 52px 0 24px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 24px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 8px;
+    }
+
+    &.open {
+      display: block;
+    }
 
     &-heading {
       color: $darkSlateBlue;
@@ -213,8 +217,16 @@
     &-row {
       @include make-row();
 
+      position: relative;
+
       @include media-breakpoint-down(xs) {
         flex-direction: column;
+      }
+
+      &:not(:last-child) {
+        @include media-breakpoint-down(xs) {
+          border-bottom: 1px solid #e7e7e9;
+        }
       }
 
       &:nth-child(odd) {
@@ -225,36 +237,59 @@
       }
     }
 
-    &-col {
+    &-title {
+      @include make-col(20, 100);
 
-      &:nth-child(1) {
-        @include make-col(20, 100);
+      position: relative;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      color: $battleshipGrey;
+      font-size: 14px;
+      font-family: $font-openSans-regular;
+      line-height: 2.29;
+      letter-spacing: 0.13px;
 
-        color: $battleshipGrey;
-        font-size: 14px;
-        font-family: $font-openSans-regular;
-        line-height: 2.29;
-        letter-spacing: 0.13px;
+      @include media-breakpoint-down(xs) {
+        @include make-col(100, 100);
 
-        @include media-breakpoint-down(xs) {
-          @include make-col(100, 100);
+        font-size: 12px;
+        font-family: $font-openSans-semi;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          right: 8px;
+          width: 16px;
+          height: 16px;
+          background-image: url("../../../assets/img/expand.svg");
+          transform: translateY(-50%);
+          content: "";
         }
       }
+    }
 
-      &:nth-child(2) {
-        @include make-col(80, 100);
+    &-text {
+      @include make-col(80, 100);
 
-        color: $battleshipGrey;
-        font-size: 14px;
+      display: flex;
+      align-items: center;
+      color: $darkSlateBlue;
+      font-size: 14px;
+      font-family: $font-openSans-semi;
+      line-height: 1.33;
+      letter-spacing: 0.13px;
+
+      @include media-breakpoint-down(xs) {
+        @include make-col(100, 100);
+
+        display: none;
+        padding-bottom: 8px;
+        font-size: 12px;
         font-family: $font-openSans-regular;
-        line-height: 2.29;
-        letter-spacing: 0.13px;
+      }
 
-        @include media-breakpoint-down(xs) {
-          @include make-col(100, 100);
-
-          display: none;
-        }
+      &.open {
+        display: flex;
       }
     }
   }
