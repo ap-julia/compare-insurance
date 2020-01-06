@@ -12,7 +12,7 @@
   box-shadow: $boxShadow;
 
   @include media-breakpoint-down(xs) {
-    padding: 16px;
+    padding: 0;
     background-color: initial;
     box-shadow: initial;
   }
@@ -25,6 +25,10 @@
     @include make-row();
 
     margin-bottom: 32px;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 24px;
+    }
   }
 
   &__col {
@@ -36,6 +40,10 @@
     font-size: 24px;
     font-family: $font-montserrat-bold;
     letter-spacing: 0.21px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
   }
 
   &__content {
@@ -49,6 +57,11 @@
     font-family: $font-openSans-regular;
     line-height: 1.5;
     letter-spacing: 0.14px;
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      font-size: 14px;
+    }
   }
 
   &__multiple-item {

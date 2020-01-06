@@ -12,6 +12,12 @@
   border-radius: 4px;
   outline: none;
 
+  @include media-breakpoint-down(xs) {
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
   &:focus {
     border: 1px solid $blue;
   }

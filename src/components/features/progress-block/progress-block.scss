@@ -7,6 +7,11 @@
   box-shadow: $boxShadow;
 
   @include media-breakpoint-down(xs) {
+    padding: 24px 16px;
+  }
+
+  @include media-breakpoint-down(xxs) {
+    padding: 0;
     background-color: initial;
     box-shadow: initial;
   }
@@ -17,6 +22,11 @@
     font-size: 24px;
     font-family: $font-montserrat-bold;
     letter-spacing: 0.21px;
+
+    @include media-breakpoint-down(xs) {
+      padding-left: 16px;
+      font-size: 16px;
+    }
   }
 
   &__main {
@@ -24,6 +34,10 @@
     align-items: center;
     justify-content: space-between;
     width: auto;
+
+    @include media-breakpoint-down(xxs) {
+      display: none;
+    }
   }
 
   &__item {
@@ -31,6 +45,10 @@
     align-items: center;
     width: 100%;
     max-width: 23%;
+
+    @include media-breakpoint-down(xs) {
+      max-width: 24%;
+    }
 
     &-mark {
       display: flex;
@@ -68,10 +86,95 @@
     &--done {
       .progress-block__item-mark {
         background-color: $limeGreen;
+
+        svg {
+          fill: $white;
+        }
       }
 
       .progress-block__item-desc {
         color: $darkSlateBlue;
+      }
+    }
+  }
+
+  //for mobile progress items
+
+  &__mobile {
+    @include media-breakpoint-up(xs) {
+      display: none;
+    }
+
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  &__step {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+
+    &:first-child,
+    &:last-child {
+      max-width: 15%;
+    }
+
+    &-dash {
+      flex-grow: 1;
+      height: 2px;
+      background-color: $silver;
+    }
+
+    &-mark {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $silver;
+      border-radius: 50%;
+      box-shadow: $silver;
+
+      svg {
+        display: none;
+        width: 16px;
+        height: 16px;
+        fill: $blue;
+      }
+    }
+
+    &-title {
+      position: absolute;
+      bottom: 18px;
+      color: $silver;
+      font-size: 12px;
+      font-family: $font-montserrat-bold;
+      letter-spacing: 0.09px;
+    }
+
+    &--current,
+    &--done {
+      .progress-block__step-mark {
+        border-color: $blue;
+      }
+
+      .progress-block__step-dash {
+        background-color: $blue;
+      }
+
+      .progress-block__step-title {
+        color: $blue;
+      }
+    }
+
+    &--done {
+      .progress-block__step-mark {
+
+        svg {
+          display: block;
+        }
       }
     }
   }

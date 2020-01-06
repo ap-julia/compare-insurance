@@ -4,11 +4,17 @@
   height: 40px;
   font-family: $font-openSans-regular;
 
+  @include media-breakpoint-down(xs) {
+    width: 100px;
+    height: 32px;
+    font-size: 14px;
+  }
+
   &__icon {
     display: none;
-    margin-left: 10px;
     width: 16px;
     height: 16px;
+    margin-left: 10px;
     fill: $white;
   }
 

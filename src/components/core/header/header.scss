@@ -47,8 +47,9 @@
 
       @include media-breakpoint-down(sm) {
         order: 2;
+        margin-right: auto;
+        margin-left: auto;
       }
-
     }
 
     &:nth-child(2) {
