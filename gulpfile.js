@@ -498,13 +498,13 @@ function buildCss() {
     `${devPath.styles}/vendors.css`,
     `${devPath.styles}/ui-kit.css`,
     `${devPath.styles}/components.css`,
-  ])
-    .pipe(plumber())
-    .pipe(concat('style.css'))
-    .pipe(dest(`${buildPath.styles}`))
-    .pipe(csso())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(dest(`${buildPath.styles}`));
+  ]).pipe(dest(`${buildPath.styles}`));
+
+//     .pipe(plumber())
+//     .pipe(concat('style.css'))
+//     .pipe(dest(`${buildPath.styles}`))
+//     .pipe(csso())
+//     .pipe(rename({ suffix: '.min' }))
 }
 
 /**
