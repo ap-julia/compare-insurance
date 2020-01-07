@@ -11,17 +11,18 @@
   &__add,
   &__base-wrap-outer {
     @include make-container();
-    //@include make-container-with-layout-gutter();
-    //@include make-container-max-widths();
   }
 
   &__base-wrap-outer {
     @include make-container-max-widths();
+
+    @include media-breakpoint-down(xs) {
+      max-width: 100%;
+    }
   }
 
   &__base,
-  &__base-wrap-outer,
-  &__section {
+  &__base-wrap-outer {
     display: flex;
     flex-grow: 1;
   }
@@ -37,26 +38,19 @@
   }
 
   &__main,
-  &__sidebar-primary,
-  &__sidebar-secondary {
+  &__sidebar-primary {
     @include make-col-ready();
 
     flex-grow: 1;
   }
 
   &__sidebar-primary {
-    @include make-col-fix(300px);
+    @include make-col-fix(265px);
+
+    max-height: 770px;
 
     @include media-breakpoint-down(lg) {
-      @include make-col(100, 100);
-    }
-  }
-
-  &__sidebar-secondary {
-    @include make-col(30, 100);
-
-    @include media-breakpoint-down(lg) {
-      @include make-col(100, 100);
+      display: none;
     }
   }
 
@@ -73,7 +67,13 @@
   }
 
   &__section {
+    display: flex;
     min-height: auto;
+
+    @include media-breakpoint-down(xs) {
+      max-width: 92%;
+      margin: 0 auto;
+    }
   }
 
   &--viewport-height {

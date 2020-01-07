@@ -1,0 +1,29 @@
+.input {
+  display: inline-block;
+  height: 40px;
+  padding: 8px 16px;
+  color: $battleshipGrey;
+  font-size: 14px;
+  font-family: $font-openSans-regular;
+  line-height: 1.43;
+  letter-spacing: 0.13px;
+  background-color: $white;
+  border: solid 1px $silver;
+  border-radius: 4px;
+  outline: none;
+  -webkit-appearance: none;
+
+  @include media-breakpoint-down(xs) {
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  &:focus {
+    border: 1px solid $blue;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+.menu {
+  $root: &;
+
+  &__icon {
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}

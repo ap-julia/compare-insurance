@@ -2,14 +2,12 @@
   $root: &;
 
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 170px;
   text-decoration: none;
-  background-color: aqua;
 
   &__img {
     display: block;
     width: 100%;
-    height: 100%;
+    object-fit: contain;
   }
 }

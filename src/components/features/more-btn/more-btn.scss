@@ -1,0 +1,30 @@
+.more-btn {
+  $root: &;
+
+  display: flex;
+  align-items: center;
+  color: $blue;
+  font-size: 10px;
+  font-family: $font-montserrat-bold;
+  line-height: 1.2;
+  letter-spacing: 0.09px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: 0.3s opacity;
+
+  &__svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.open {
+    .more-btn__svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

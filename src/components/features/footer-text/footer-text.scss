@@ -1,0 +1,13 @@
+.footer-text {
+  $root: &;
+
+  display: block;
+  max-width: 830px;
+  margin: 0 auto;
+  color: $darkSlateBlue;
+  font-size: 14px;
+  font-family: $font-openSans-regular;
+  line-height: 1.43;
+  letter-spacing: 0.13px;
+  text-decoration: none;
+}

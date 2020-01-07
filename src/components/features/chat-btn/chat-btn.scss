@@ -1,0 +1,25 @@
+.chat-btn {
+  $root: &;
+
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: $boxShadow;
+
+  @include media-breakpoint-down(sm) {
+    right: 16px;
+    bottom: 80px;
+  }
+
+  &__svg {
+    width: 56px;
+    height: 56px;
+  }
+}

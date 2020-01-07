@@ -1,0 +1,69 @@
+.filter-btn {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  height: 40px;
+  margin-left: 16px;
+  color: $battleshipGrey;
+  font-size: 14px;
+  font-family: $font-openSans-regular;
+  line-height: 1.43;
+  letter-spacing: 0.13px;
+  background-color: $white;
+  border: solid 1px $silver;
+  border-radius: 4px;
+
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+
+  @include media-breakpoint-down(xs) {
+    min-width: 140px;
+    height: 32px;
+    margin-left: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+  }
+
+  &__content {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    z-index: 10;
+    display: none;
+    min-width: 280px;
+    padding: 36px 24px 24px;
+    background-color: $white;
+    border: 1px solid $silver;
+    box-shadow: $boxShadow;
+
+    @include media-breakpoint-down(xs) {
+      top: 35px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    fill: $battleshipGrey;
+  }
+
+  &.open {
+    .filter-btn__content {
+      display: block;
+    }
+  }
+}

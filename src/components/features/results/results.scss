@@ -1,0 +1,48 @@
+.results {
+  $root: &;
+
+  padding: 8px 0 8px 24px;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 0;
+  }
+
+  &__title {
+    display: flex;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xs) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      margin-right: 32px;
+
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 16px;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+  }
+}

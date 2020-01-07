@@ -1,41 +1,31 @@
 .header {
   $root: &;
 
+  position: fixed;
+  z-index: 12;
   display: flex;
   flex-direction: column;
+  width: 100%;
   min-height: inherit;
-  overflow: hidden;
-  background-color: red;
-
-  &__section {
-
-    &:nth-child(1) {
-      min-height: 100px;
-      background-color: #ffbf02;
-    }
-
-    &:nth-child(2) {
-      min-height: 50px;
-      background-color: #818181;
-
-      #{$root}__col {
-
-        &:nth-child(1) {
-          @include make-col-fix(300px);
-        }
-      }
-    }
-  }
+  //overflow: hidden;
+  background-color: $white;
+  box-shadow: $boxShadow;
 
   &__container {
     @include make-container();
     @include make-container-max-widths();
+
+    min-height: 80px;
   }
 
   &__row {
     @include make-row();
 
     min-height: inherit;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: space-between;
+    }
   }
 
   &__col {
@@ -44,19 +34,77 @@
     padding: 5px;
 
     &:nth-child(1) {
-      @include make-col-fix(150px);
+      @include make-col-fix(170);
 
-      background-color: green;
+      display: flex;
+      align-items: center;
+      margin-right: 5%;
+      margin-left: 32px;
+
+      @include media-breakpoint-down(md) {
+        margin-right: 16px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        order: 2;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
 
     &:nth-child(2) {
-      background-color: yellow;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include make-col-ready();
+
+      @include media-breakpoint-down(sm) {
+        order: 1;
+
+        @include make-col-fix(40);
+      }
     }
 
     &:nth-child(3) {
-      @include make-col(10, 100);
+      @include make-col(20, 100);
 
-      background-color: blue;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include media-breakpoint-down(md) {
+        @include make-col(8, 100);
+      }
+
+      @include media-breakpoint-down(sm) {
+        order: 3;
+      }
+    }
+  }
+
+  &__menu {
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: auto;
+    }
+  }
+
+  &__profile {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__profile-btn {
+    display: block;
+
+    @include media-breakpoint-down(md) {
+      display: none;
     }
   }
 }

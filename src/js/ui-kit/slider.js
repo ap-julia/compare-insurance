@@ -1,18 +1,28 @@
-(($) => {
-  const options = {
-    mode: 'fade',
-    controls: false,
-    responsive: true,
-    pagerSelector: '.slider__pagination',
-  };
-
-  const slider = $('.slider__list').bxSlider(options);
-
-  $('.slider__next').on('click', () => {
-    slider.goToNextSlide();
+$(function () {
+  var sliderRange = $('.slider-range');
+  sliderRange.slider({
+    range: true,
+    min: 1000,
+    max: 10000,
+    values: [2000, 5000],
+    slide(event, ui) {
+      $('.slider__label-min').text(ui.values[0]);
+      $('.slider__label-max').text(ui.values[1]);
+    },
   });
 
-  $('.slider__prev').on('click', () => {
-    slider.goToPrevSlide();
-  });
-})(jQuery);
+  sliderRange.each(function (){
+    var sliders = $(this).find('.ui-slider-handle');
+
+    var labelLeft = document.createElement('span');
+    labelLeft.classList.add('slider__label-min');
+    labelLeft.innerHTML = sliderRange.slider('values', 0);
+    sliders[0].appendChild(labelLeft);
+    var labelRight = document.createElement('span');
+    labelRight.classList.add('slider__label-max');
+    labelRight.innerHTML = sliderRange.slider('values', 1);
+    sliders[1].appendChild(labelRight);
+
+  })
+  
+})();

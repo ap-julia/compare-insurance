@@ -2,19 +2,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 350px;
-  min-height: 50px;
-  margin: 0 15px;
+  min-height: 40px;
   padding: 10px 25px;
-  color: $black;
-  font-size: 20px;
-  font-family: $secure-fonts;
-  background-color: silver;
+  color: $white;
+  font-size: 14px;
+  font-family: $font-montserrat-semi;
+  background-color: $blue;
   border: none;
+  border-radius: 5px;
+  opacity: 1;
+  transition: 0.5s;
   user-select: none;
 
   &:hover {
     text-decoration: none;
+    opacity: 0.8;
   }
 
   &:focus {
@@ -27,12 +29,17 @@
 
   &--primary {
     color: $white;
-    background-color: red;
+    background-color: $blue;
   }
 
   &--secondary {
-    color: $white;
-    background-color: green;
+    color: $blue;
+    background-color: $white;
+    border: 1px solid $blue;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
   }
 
   &--block {

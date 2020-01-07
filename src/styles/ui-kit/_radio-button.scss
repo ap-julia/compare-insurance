@@ -1,0 +1,48 @@
+.radio-button {
+  display: inline-block;
+  width: 116px;
+  height: 40px;
+  font-family: $font-openSans-regular;
+
+  @include media-breakpoint-down(xs) {
+    width: 100px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  &__icon {
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    fill: $white;
+  }
+
+  input {
+    display: none;
+  }
+
+  input + label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: $battleshipGrey;
+    border: 1px solid $silver;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input + label:hover {
+    opacity: 0.8;
+  }
+
+  input:checked + label {
+    color: $white;
+    background-color: $blue;
+
+    .radio-button__icon {
+      display: block;
+    }
+  }
+}
