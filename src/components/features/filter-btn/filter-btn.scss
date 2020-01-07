@@ -16,6 +16,7 @@
   background-color: $white;
   border: solid 1px $silver;
   border-radius: 4px;
+  cursor: pointer;
 
   @include media-breakpoint-up(xl) {
     display: none;

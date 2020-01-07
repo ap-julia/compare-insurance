@@ -1,5 +1,7 @@
 .select {
-  background: url("../../assets/img/arrow.svg") 96% no-repeat;
+  background-image: url("../../assets/img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -10,6 +12,7 @@
 
     @include media-breakpoint-down(xs) {
       padding: 6px 24px 6px 12px;
+      background-position: right 2px center;
     }
   }
 }

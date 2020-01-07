@@ -9,12 +9,15 @@
     </header>
     <main class="layout__base">
       <div class="layout__base-wrap-outer">
-        @include('components/features/progress-block/progress-block.html')
+        @include('components/features/progress-block-4/progress-block.html')
         <div class="layout__section">
-          @include('components/features/applicant-form/applicant-form.html')
+          <h3 style="color: #506aa6">
+            Thank you for completing the application form, one of our health
+            insurance experts will be in touch shortly to help you choose the best insurance plan
+          </h3>
         </div>
-        @include('components/features/chat-btn/chat-btn.html')
       </div>
+      @include('components/features/chat-btn/chat-btn.html')
     </main>
     <footer class="layout__footer">
       @include('components/core/footer/footer.html')
