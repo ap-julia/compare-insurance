@@ -22,10 +22,13 @@
 
   //toggle filter popup
 
-  $('.js-filter-button').on( "click", function( event ) {
-    $(event.target).addClass('open');
+  $('.js-filter-button').on( "click", function() {
+    console.log(this);
+    $(this).addClass('open');
   });
-  $('.js-filter-close').on( "click", function( event ) {
+  $('.js-filter-close').on( "click", function(e) {
+    e.stopPropagation();
+    e.preventDefault();
     $('.js-filter-button').removeClass('open');
   });
 })(jQuery);
