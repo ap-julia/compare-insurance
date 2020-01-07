@@ -267,6 +267,10 @@
           content: "";
         }
       }
+
+      &.open::before {
+        background-image: url("../../../assets/img/minus.svg");
+      }
     }
 
     &-text {

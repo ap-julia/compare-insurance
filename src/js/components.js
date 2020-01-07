@@ -8,22 +8,27 @@
   });
 
   //toggle card details
-  $('.js-card-button').on( "click", function( event ) {
-    var currentComponent = $(event.target).closest('.card');
+  $('.js-card-button').on( "click", function() {
+    var currentComponent = $(this).closest('.card');
+    var textElement = currentComponent.find('.js-card-button-text');
+    textElement.each(function () {
+      var text = $(this).text();
+      $(this).text(text === "View Details" ? "Hide Details" : "View Details");
+    });
     currentComponent.find('.js-card-details').toggleClass('open');
     currentComponent.find('.js-card-button').toggleClass('open');
   });
 
   //toggle card details item
 
-  $('.card__details-title').on( "click", function( event ) {
-    $(event.target).siblings().toggleClass('open');
+  $('.card__details-title').on( "click", function() {
+    $(this).toggleClass('open');
+    $(this).siblings().toggleClass('open');
   });
 
   //toggle filter popup
 
   $('.js-filter-button').on( "click", function() {
-    console.log(this);
     $(this).addClass('open');
   });
   $('.js-filter-close').on( "click", function(e) {

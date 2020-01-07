@@ -1,3 +1,19 @@
 .select {
+  background: url("../../assets/img/arrow.svg") 96% no-repeat;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
+  &.input {
+    padding: 8px 32px 8px 16px;
+
+    @include media-breakpoint-down(xs) {
+      padding: 6px 24px 6px 12px;
+    }
+  }
+}
+
+select::-ms-expand {
+  display: none;
 }
