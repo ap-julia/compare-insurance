@@ -51,6 +51,7 @@
   }
 
   &__title {
+    width: 100%;
     margin-bottom: 8px;
     color: $darkSlateBlue;
     font-size: 16px;
@@ -59,7 +60,6 @@
     letter-spacing: 0.14px;
 
     @include media-breakpoint-down(xs) {
-      width: 100%;
       font-size: 14px;
     }
   }

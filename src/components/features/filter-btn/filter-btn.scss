@@ -37,17 +37,18 @@
 
   &__content {
     position: absolute;
-    top: 24px;
-    right: 50%;
+    top: 45px;
+    right: 0;
     z-index: 10;
     display: none;
     min-width: 280px;
     padding: 36px 24px 24px;
     background-color: $white;
+    border: 1px solid $silver;
     box-shadow: $boxShadow;
 
     @include media-breakpoint-down(xs) {
-      right: 0;
+      top: 35px;
     }
   }
 

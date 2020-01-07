@@ -1,5 +1,5 @@
-$(() => {
-  const sliderRange = $('#slider-range');
+$(function () {
+  var sliderRange = $('.slider-range');
   sliderRange.slider({
     range: true,
     min: 1000,
@@ -11,13 +11,18 @@ $(() => {
     },
   });
 
-  var sliders = $('.ui-slider-handle');
-  var labelLeft = document.createElement('span');
-  labelLeft.classList.add('slider__label-min');
-  labelLeft.innerHTML = sliderRange.slider('values', 0);
-  sliders[0].appendChild(labelLeft);
-  var labelRight = document.createElement('span');
-  labelRight.classList.add('slider__label-max');
-  labelRight.innerHTML = sliderRange.slider('values', 1);
-  sliders[1].appendChild(labelRight);
-});
+  sliderRange.each(function (){
+    var sliders = $(this).find('.ui-slider-handle');
+
+    var labelLeft = document.createElement('span');
+    labelLeft.classList.add('slider__label-min');
+    labelLeft.innerHTML = sliderRange.slider('values', 0);
+    sliders[0].appendChild(labelLeft);
+    var labelRight = document.createElement('span');
+    labelRight.classList.add('slider__label-max');
+    labelRight.innerHTML = sliderRange.slider('values', 1);
+    sliders[1].appendChild(labelRight);
+
+  })
+  
+})();
