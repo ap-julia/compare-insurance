@@ -667,10 +667,10 @@ function buildJs() {
     .pipe(babel({
       presets: ['@babel/env'],
     }))
-    .pipe(concat('script.js'))
-    .pipe(dest(`${buildPath.js}`))
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
+    // .pipe(concat('script.js'))
+    // .pipe(dest(`${buildPath.js}`))
+    // .pipe(uglify())
+    // .pipe(rename({ suffix: '.min' }))
     .pipe(dest(`${buildPath.js}`));
 }
 
