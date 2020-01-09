@@ -96,7 +96,7 @@ const devPath = {
 const buildPath = {
   assets: {
     root: `${buildRoot}/assets`,
-    img: `${buildRoot}/assets/img`,
+    img: `${buildRoot}/assets/img/`,
   },
   fonts: `${buildRoot}/fonts`,
   js: `${buildRoot}/js`,
@@ -284,10 +284,10 @@ function watchHtmlLib() {
 function buildHtml() {
   return src(`${devPath.pages}/*.html`)
     .pipe(htmlreplace({
-      css: 'styles/style.min.css',
+      css: 'styles/style.css',
       js: {
         src: null,
-        tpl: '<script src="js/script.min.js" async></script>',
+        tpl: '<script src="js/script.js" async></script>',
       },
     }))
     .pipe(dest(`${buildPath.pages}`));
@@ -498,7 +498,10 @@ function buildCss() {
     `${devPath.styles}/vendors.css`,
     `${devPath.styles}/ui-kit.css`,
     `${devPath.styles}/components.css`,
-  ]).pipe(dest(`${buildPath.styles}`));
+  ])
+    .pipe(dest(`${buildPath.styles}`))
+    .pipe(concat('style.css'))
+    .pipe(dest(`${buildPath.styles}`));
 
 //     .pipe(plumber())
 //     .pipe(concat('style.css'))
@@ -667,7 +670,7 @@ function buildJs() {
     .pipe(babel({
       presets: ['@babel/env'],
     }))
-    // .pipe(concat('script.js'))
+    .pipe(concat('script.js'))
     // .pipe(dest(`${buildPath.js}`))
     // .pipe(uglify())
     // .pipe(rename({ suffix: '.min' }))
