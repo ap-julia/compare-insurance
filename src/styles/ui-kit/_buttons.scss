@@ -38,6 +38,17 @@
     border: 1px solid $blue;
   }
 
+  //for landing
+  &--accent {
+    min-width: 200px;
+    padding: 12px 32px;
+    font-size: 17px;
+    font-family: $font-montserrat-semi;
+    letter-spacing: 1.36px;
+    background-color: $malibu;
+    border-radius: 23px;
+  }
+
   &--uppercase {
     text-transform: uppercase;
   }

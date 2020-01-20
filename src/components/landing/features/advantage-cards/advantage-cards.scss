@@ -1,0 +1,37 @@
+$transition: 0.5s;
+
+.advantage-cards {
+  $root: &;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    flex: 1 1 45%;
+    align-items: center;
+    margin-right: 24px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: $white;
+      box-shadow: $boxShadowLanding;
+    }
+  }
+
+  &__img {
+    width: 21px;
+    height: 21px;
+    margin-right: 12px;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-family: $font-montserrat-semi;
+    letter-spacing: 0.68px;
+    text-transform: uppercase;
+  }
+}

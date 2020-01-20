@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+  @include('pages/include/head.html')
+
+  <body class="layout landing">
+    @include('pages/include/svg-inline.html')
+    <header class="layout__header">
+      @include('components/landing/core/header/header.html')
+    </header>
+    <main class="layout__base">
+      <div class="layout__base-wrap-outer">
+
+        <div class="layout__section">
+          @include('components/landing/features/main-section/main-section.html')
+        </div>
+        <div class="layout__section">
+          @include('components/landing/features/advantage-section/advantage-section.html')
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

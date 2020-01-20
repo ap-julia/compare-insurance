@@ -1,0 +1,44 @@
+.header-info {
+  $root: &;
+
+  height: 40px;
+  padding: 12px 0;
+  background-color: $lightNavy;
+
+  &__container {
+    @include make-container-max-widths();
+  }
+
+  &__list {
+    @include make-row();
+
+    justify-content: flex-end;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    &--phone {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    color: $white;
+    font-size: 14px;
+    font-family: $font-montserrat-semi;
+    text-transform: uppercase;
+    letter-spacing: 1.12px;
+    text-decoration: none;
+
+    &:not(:last-of-type) {
+      border-right: 2px solid #7580a8;;
+    }
+  }
+}
