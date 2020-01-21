@@ -1,0 +1,42 @@
+.testimonials-section {
+  $root: &;
+
+  width: 100%;
+  padding: 140px 0 130px;
+  background-color: $white;
+
+  &__title {
+    margin-bottom: 44px;
+    font-size: 31px;
+    font-family: $font-montserrat-bold;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-family: $font-openSans-regular;
+    line-height: 33px;
+    letter-spacing: 0;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-family: $font-montserrat-regular;
+    line-height: 26px;
+    letter-spacing: 0.16px;
+
+    &--bold {
+      font-family: $font-montserrat-semi;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.contacts-section {
+  $root: &;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $white;
+
+  @include make-row();
+
+  &__title {
+    margin-bottom: 44px;
+    font-size: 31px;
+    font-family: $font-montserrat-bold;
+    letter-spacing: 0;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 18px;
+    font-family: $font-openSans-regular;
+    line-height: 26px;
+    letter-spacing: 0;
+  }
+}

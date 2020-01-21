@@ -1,0 +1,19 @@
+.partners-section {
+  $root: &;
+
+  width: 100%;
+  padding: 100px 0;
+  background-color: $white;
+
+  &__title {
+    font-size: 20px;
+    font-family: $font-montserrat-semi;
+    letter-spacing: 0.86px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    width: 80%;
+  }
+}

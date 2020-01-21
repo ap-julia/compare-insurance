@@ -3,3 +3,4 @@
 @include('../node_modules/bxslider/dist/jquery.bxslider.min.js')
 @include('../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js')
 @include('../node_modules/jquery-ui-dist/jquery-ui.js')
+@include('../node_modules/owl.carousel/dist/owl.carousel.js/owl.carousel.min.js')
