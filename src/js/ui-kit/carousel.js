@@ -15,13 +15,18 @@
       1000: {
         items: 5,
         nav: true,
-        loop: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: true,
       },
     },
   });
 
   $('.js-testimonials').owlCarousel({
     loop: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    autoplayHoverPause: true,
     items: 1,
     nav: true,
   });

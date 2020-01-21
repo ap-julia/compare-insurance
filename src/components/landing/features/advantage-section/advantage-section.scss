@@ -1,10 +1,11 @@
 .advantage-section {
   $root: &;
 
-  width: 100%;
+  display: flex;
   justify-content: space-between;
-
-  @include make-row();
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
 
   &__info {
     display: flex;
@@ -12,6 +13,8 @@
     align-items: flex-start;
     justify-content: center;
     width: 55%;
+    min-width: 590px;
+    padding: 110px 0 130px;
   }
 
   &__title {
@@ -29,16 +32,17 @@
   }
 
   &__cards {
-    max-width: 75%;
     margin: 36px 0 56px;
   }
 
   &__bg {
     position: relative;
-    overflow: hidden;
+    width: 380px;
   }
 
   &__img {
+    position: absolute;
+    top: 32px;
     width: 380px;
     height: 665px;
     background-image: url("../../../../assets/img/phone.png");

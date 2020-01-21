@@ -1,0 +1,43 @@
+.footer-info {
+  $root: &;
+
+  padding: 26px 0;
+  font-size: 12px;
+  color: $white;
+  background-color: $lightNavy;
+
+  &__container {
+    @include make-container-max-widths();
+  }
+
+  &__text {
+    font-family: $font-openSans-regular;
+    letter-spacing: 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      padding: 0 5px;
+      border-right: 1px solid $white;
+    }
+
+    &-link {
+      color: inherit;
+      font-family: $font-openSans-semi;
+      text-decoration: none;
+      transition: 0.5s;
+
+      &:hover,
+      &.active {
+        color: $malibu;
+        text-decoration: underline;
+      }
+    }
+  }
+}

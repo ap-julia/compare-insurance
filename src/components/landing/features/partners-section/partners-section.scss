@@ -13,6 +13,10 @@
     text-transform: uppercase;
   }
 
+  &__carousel {
+    max-width: 94%;
+  }
+
   &__item {
     width: 80%;
   }

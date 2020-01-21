@@ -19,8 +19,10 @@
 
 // landing
 @import "../components/landing/core/header/header";
-@import "../components/landing/features/nav-landing/nav-landing";
+@import "../components/landing/core/footer/footer";
 @import "../components/landing/features/header-info/header-info";
+@import "../components/landing/features/footer-info/footer-info";
+@import "../components/landing/features/nav-landing/nav-landing";
 @import "../components/landing/features/nav-icon/nav-icon";
 @import "../components/landing/features/main-section/main-section";
 @import "../components/landing/features/nav-cards/nav-cards";
@@ -30,3 +32,4 @@
 @import "../components/landing/features/info-section/info-section";
 @import "../components/landing/features/testimonials-section/testimonials-section";
 @import "../components/landing/features/contacts-section/contacts-section";
+@import "../components/landing/features/contacts-cards/contacts-cards";

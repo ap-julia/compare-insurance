@@ -6,7 +6,7 @@ $transition: 0.5s;
   display: flex;
 
   &__item {
-    position: relative;;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,6 @@ $transition: 0.5s;
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
       width: 150px;
       height: 170px;
       background-color: $malibu;
@@ -41,23 +40,31 @@ $transition: 0.5s;
         background-color: $white;
         border: 1px solid $paleGrey;
         box-shadow: 0 1px 12px #00000027;
-        transform: scaleY(1.1);
+        transform: scaleY(1.12);
       }
 
       .nav-cards__icon {
         fill: $malibu;
       }
     }
+
+    &:last-of-type {
+      .nav-cards__icon {
+        transform: rotate(25deg);
+      }
+    }
   }
 
   &__icon {
-    width: 75px;
-    height: 75px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
     transition: $transition;
     fill: $white;
   }
 
   &__title {
+    z-index: 1;
     font-size: 17px;
     font-family: $font-montserrat-semi;
     text-transform: uppercase;

@@ -4,13 +4,20 @@ $transition: 0.5s;
   $root: &;
 
   display: flex;
-  flex-wrap: wrap;
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    &:first-of-type {
+      flex-shrink: 0;
+    }
+  }
 
   &__item {
     display: flex;
-    flex: 1 1 45%;
     align-items: center;
-    margin-right: 24px;
+    margin-bottom: 4px;
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;

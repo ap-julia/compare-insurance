@@ -1,9 +1,49 @@
-<div class="footer">
-  <div class="footer__section">
-    <div class="footer__container">
-      <div class="footer__row">
-        @include('components/features/footer-text/footer-text.html')
+<div class="landing-footer">
+  <div class=landing-footer__section">
+    <div class="landing-footer__container">
+      <div class="landing-footer__row">
+        <div class="landing-footer__col">
+          <div class="landing-footer__logo">
+            @include('components/landing/features/logo/logo.html')
+          </div>
+          <p class="landing-footer__text">Compare Insurance is owned & operated by Savington International Insurance Brokers LLC, licensed and regulated by the United Arab Emirates Insurance Authority Registration Number 202.
+          </p>
+          <a href="tel:800784866" class="btn btn--uppercase btn--accent">
+            <svg class="header-info__icon header-info__icon--phone">
+              <use xlink:href="#phone"/>
+            </svg>
+            <span>+800 784 866</span>
+          </a>
+        </div>
+        <nav class="landing-footer__col">
+          <ul class="nav-landing__list nav-landing__list--vertical">
+            <li class="nav-landing__item">
+              <a class="nav-landing__link" href="">
+                <span>My account</span>
+              </a>
+            </li>
+            <li class="nav-landing__item">
+              <a class="nav-landing__link" href="">
+                <span>PRODUCTS</span>
+              </a>
+            </li>
+            <li class="nav-landing__item">
+              <a class="nav-landing__link" href="">
+                <span>About Us</span>
+              </a>
+            </li>
+            <li class="nav-landing__item">
+              <a class="nav-landing__link" href="">
+                <span>Contact Us</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
+    <div class="landing-footer__col">
+      @include('components/landing/features/footer-info/footer-info.html')
+    </div>
+  </div>
   </div>
 </div>

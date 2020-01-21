@@ -1,6 +1,16 @@
 .landing {
   color: $lightNavy;
 
+  &__container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(sm) {
+      width: 96%;
+    }
+  }
+
   .layout__header {
     min-height: 152px;
   }

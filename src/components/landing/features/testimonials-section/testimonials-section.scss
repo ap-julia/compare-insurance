@@ -3,7 +3,6 @@
 
   width: 100%;
   padding: 140px 0 130px;
-  background-color: $white;
 
   &__title {
     margin-bottom: 44px;
@@ -11,6 +10,10 @@
     font-family: $font-montserrat-bold;
     letter-spacing: 0;
     text-align: center;
+  }
+
+  &__carousel {
+    max-width: 94%;
   }
 
   &__item {

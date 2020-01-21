@@ -2,7 +2,7 @@
   $root: &;
 
   display: block;
-  width: 170px;
+  max-width: 170px;
   text-decoration: none;
 
   &__img {
@@ -12,6 +12,6 @@
   }
 
   &--landing {
-    width: 270px;
+    max-width: 100%;
   }
 }

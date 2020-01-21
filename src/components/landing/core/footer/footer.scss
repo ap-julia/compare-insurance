@@ -1,4 +1,4 @@
-.footer {
+.landing-footer {
   display: flex;
   flex-direction: column;
   min-height: inherit;
@@ -15,5 +15,9 @@
     @include make-row();
 
     min-height: inherit;
+  }
+
+  &__logo {
+    width: 190px;
   }
 }
