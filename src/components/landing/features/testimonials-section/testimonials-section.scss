@@ -71,6 +71,10 @@
     z-index: 1;
     width: 20%;
     padding-bottom: 15%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__shape {

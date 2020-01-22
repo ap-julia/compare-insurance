@@ -3,7 +3,7 @@
     <div class="landing-footer__container landing__container">
       <div class="landing-footer__row landing-footer__row-menu">
         <div class="landing-footer__col">
-          <div class="landing-footer__logo">
+          <div class="landing-footer__logo landing-footer__logo--desktop">
             @include('components/landing/features/logo/logo.html')
           </div>
           <p class="landing-footer__text">Compare Insurance is owned & operated by Savington International Insurance Brokers LLC, licensed and regulated by the United Arab Emirates Insurance Authority Registration Number 202.
@@ -15,8 +15,11 @@
             <span>+800 784 866</span>
           </a>
         </div>
-        <nav class="landing-footer__col">
-          <ul class="nav-landing__list nav-landing__list--vertical">
+        <nav class="landing-footer__col landing-footer__col--nav">
+          <div class="landing-footer__logo landing-footer__logo--mobile">
+            @include('components/landing/features/logo/logo.html')
+          </div>
+          <ul class="landing-footer__nav nav-landing__list nav-landing__list--vertical">
             <li class="nav-landing__item">
               <a class="nav-landing__link" href="">
                 <span>My account</span>
@@ -37,8 +40,8 @@
                 <span>Contact Us</span>
               </a>
             </li>
+            @include('components/landing/features/social/social.html')
           </ul>
-          @include('components/landing/features/social/social.html')
         </nav>
       </div>
       <div class="landing-footer__bg">

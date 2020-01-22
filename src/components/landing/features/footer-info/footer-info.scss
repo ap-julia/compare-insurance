@@ -4,6 +4,7 @@
   width: 100%;
   padding: 26px 0;
   font-size: 12px;
+  line-height: 28px;
   color: $white;
   background-color: $lightNavy;
 
@@ -30,6 +31,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
 
     &-item {
       padding: 0 5px;

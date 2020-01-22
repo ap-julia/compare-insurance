@@ -6,8 +6,7 @@
 
   &__container {
     position: relative;
-
-    @include make-container();
+    margin: 0 auto;
   }
 
   &__row {
@@ -17,17 +16,64 @@
     align-items: center;
     justify-content: space-between;
 
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      flex-flow: column-reverse;
+      align-items: center;
+    }
+
     &-menu {
       padding: 60px 0;
+
+      @include media-breakpoint-down(sm) {
+        padding: 50px 0;
+      }
     }
   }
 
   &__col {
     max-width: 445px;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--nav {
+      @include media-breakpoint-down(sm) {
+        align-items: center;
+
+        .nav-landing__item {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include media-breakpoint-down(sm) {
+      align-items: center;
+      padding: 38px 0;
+    }
   }
 
   &__logo {
     width: 190px;
+
+    &--desktop {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
   }
 
   &__text {
@@ -36,6 +82,11 @@
     font-size: 14px;
     font-family: $font-openSans-regular;
     line-height: 18px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 36px;
+      text-align: center;
+    }
   }
 
   &__bg {
@@ -44,6 +95,10 @@
     left: 60%;
     width: 20%;
     padding-bottom: 15%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__shape {
