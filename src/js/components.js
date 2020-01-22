@@ -1,10 +1,19 @@
 (($) => {
   //toggle menu
   $('.js-nav-icon').click(function () {
-    $('.nav-landing').addClass('nav-global--mobile nav-global--vertical');
+    $('.nav-global').addClass('nav-global--mobile nav-global--vertical');
   });
   $('.js-nav-global__close').click(function () {
-    $('.nav-landing').removeClass('nav-global--mobile nav-global--vertical');
+    $('.nav-global').removeClass('nav-global--mobile nav-global--vertical');
+  });
+
+
+  // toggle landing menu
+  $('.js-landing-nav-icon').click(function () {
+    $('.nav-landing').addClass('nav-landing--mobile nav-landing--vertical');
+  });
+  $('.js-nav-landing__close').click(function () {
+    $('.nav-landing').removeClass('nav-landing--mobile nav-landing--vertical');
   });
 
   //toggle card details
