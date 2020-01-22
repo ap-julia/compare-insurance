@@ -13,9 +13,14 @@
 
   .layout__header {
     min-height: 152px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 120px;
+    }
   }
 
   .layout__section {
+    width: 100%;
     max-width: 100%;
   }
 

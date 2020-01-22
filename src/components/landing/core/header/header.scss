@@ -12,6 +12,10 @@
 
   &__container {
     min-height: 112px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 80px;
+    }
   }
 
   &__row {

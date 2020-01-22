@@ -4,6 +4,12 @@ $transition: 0.5s;
   $root: &;
 
   display: flex;
+  width: 100%;
+  max-width: 480px;
+
+  @include media-breakpoint-down(xxs) {
+    justify-content: center;
+  }
 
   &__item {
     position: relative;
@@ -11,7 +17,8 @@ $transition: 0.5s;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 30%;
+    max-width: 150px;
     height: 170px;
     margin-right: 16px;
     color: $white;
@@ -20,16 +27,26 @@ $transition: 0.5s;
     cursor: pointer;
     transition: $transition;
 
+    @include media-breakpoint-down(xxs) {
+      min-width: 30%;
+      height: 116px;
+      margin-right: 8px;
+    }
+
     &::before {
       position: absolute;
       top: 0;
       left: 0;
-      width: 150px;
+      width: 100%;
       height: 170px;
       background-color: $malibu;
       border-radius: 3px;
       transition: $transition;
       content: "";
+
+      @include media-breakpoint-down(xxs) {
+        height: 116px;
+      }
     }
 
     &:hover {
@@ -49,6 +66,8 @@ $transition: 0.5s;
     }
 
     &:last-of-type {
+      margin-right: 0;
+
       .nav-cards__icon {
         transform: rotate(25deg);
       }
@@ -61,6 +80,11 @@ $transition: 0.5s;
     height: 70px;
     transition: $transition;
     fill: $white;
+
+    @include media-breakpoint-down(xxs) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__title {
@@ -68,5 +92,9 @@ $transition: 0.5s;
     font-size: 17px;
     font-family: $font-montserrat-semi;
     text-transform: uppercase;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 12px;
+    }
   }
 }

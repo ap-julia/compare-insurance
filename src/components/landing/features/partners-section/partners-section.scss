@@ -2,8 +2,18 @@
   $root: &;
 
   width: 100%;
-  padding: 100px 0;
+  padding: 130px 0 120px;
   background-color: $white;
+
+  @include media-breakpoint-down(sm) {
+    padding: 80px 0;
+  }
+
+  @include media-breakpoint-down(xxs) {
+    .landing__container {
+      width: 100%;
+    }
+  }
 
   &__title {
     font-size: 20px;
@@ -11,10 +21,19 @@
     letter-spacing: 0.86px;
     text-align: center;
     text-transform: uppercase;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 15px;
+      letter-spacing: 0.65px;
+    }
   }
 
   &__carousel {
     max-width: 94%;
+
+    @include media-breakpoint-down(xxs) {
+      max-width: 100%;
+    }
   }
 
   &__item {

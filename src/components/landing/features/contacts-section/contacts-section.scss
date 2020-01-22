@@ -14,6 +14,10 @@
     max-width: 830px;
     margin: 0 auto;
     padding: 112px 0 132px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 70px 0 80px;
+    }
   }
 
   &__title {
@@ -21,6 +25,13 @@
     font-size: 31px;
     font-family: $font-montserrat-bold;
     letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.48px;
+    }
   }
 
   &__subtitle {
@@ -29,6 +40,11 @@
     font-family: $font-openSans-regular;
     line-height: 26px;
     letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__map {

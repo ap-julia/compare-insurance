@@ -24,9 +24,6 @@
 
   $('.js-testimonials').owlCarousel({
     loop: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    autoplayHoverPause: true,
     items: 1,
     center: true,
     0: {
@@ -34,6 +31,9 @@
     },
     600: {
       nav: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      autoplayHoverPause: true,
     },
   });
 }(jQuery));

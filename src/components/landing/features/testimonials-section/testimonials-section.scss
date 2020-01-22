@@ -5,12 +5,22 @@
   width: 100%;
   padding: 140px 0 130px;
 
+  @include media-breakpoint-down(sm) {
+    padding: 70px 0 80px;
+  }
+
   &__title {
     margin-bottom: 44px;
     font-size: 31px;
     font-family: $font-montserrat-bold;
     letter-spacing: 0;
     text-align: center;
+
+    @include media-breakpoint-down(xxs) {
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 
   &__carousel {
@@ -31,6 +41,11 @@
     font-family: $font-openSans-regular;
     line-height: 33px;
     letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__subtitle {
@@ -38,6 +53,11 @@
     font-family: $font-montserrat-regular;
     line-height: 26px;
     letter-spacing: 0.16px;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 12px;
+      line-height: 26px;
+    }
 
     &--bold {
       font-family: $font-montserrat-semi;

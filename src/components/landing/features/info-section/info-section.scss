@@ -9,9 +9,20 @@
 
     @include make-row();
 
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      flex-flow: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+
     &--secondary {
       padding: 158px 0;
       background-color: $white;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
     }
   }
 
@@ -26,6 +37,12 @@
     margin-left: auto;
     padding: 135px 0 146px;
 
+    @include media-breakpoint-down(sm) {
+      align-items: center;
+      margin: 0 auto;
+      padding: 70px 0 80px;
+    }
+
     &--right {
       margin: 0;
       padding: 0;
@@ -37,6 +54,12 @@
     font-size: 31px;
     font-family: $font-montserrat-bold;
     letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 
   &__text,
@@ -46,11 +69,20 @@
     font-family: $font-openSans-regular;
     line-height: 26px;
     letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__subtitle {
     margin: 24px 0 44px;
     font-family: $font-openSans-semi;
+
+    @include media-breakpoint-down(xxs) {
+      margin: 16px 0 30px;
+    }
   }
 
   &__bg-absolute {
@@ -59,6 +91,12 @@
     width: 50%;
     height: 100%;
     overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+    }
   }
 
   &__img-absolute {
@@ -104,6 +142,10 @@
   &__shape {
     position: absolute;
     border-radius: 50%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
 
     &--top {
       top: 8%;

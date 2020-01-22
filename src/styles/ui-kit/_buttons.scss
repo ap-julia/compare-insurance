@@ -48,6 +48,10 @@
     letter-spacing: 1.36px;
     background-color: $malibu;
     border-radius: 23px;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+    }
   }
 
   &--uppercase {
