@@ -2,10 +2,10 @@
   $('.js-partners').owlCarousel({
     loop: true,
     responsiveClass: true,
+    center: true,
     responsive: {
       0: {
-        center: true,
-        items: 3,
+        items: 2,
         nav: false,
       },
       600: {
@@ -28,8 +28,8 @@
     autoplaySpeed: 2000,
     autoplayHoverPause: true,
     items: 1,
+    center: true,
     0: {
-      center: true,
       nav: false,
     },
     600: {

@@ -64,15 +64,15 @@
 
   &__img {
     position: absolute;
-    top: 0;
+    top: 3%;
     right: 0;
-    bottom: 0;
+    bottom: -5%;
     left: 0;
     z-index: 2;
     background-image: url("../../../../assets/img/hero-image.png");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: contain;
+    background-size: cover;
   }
 
   &__shape {
@@ -81,7 +81,7 @@
 
     &--top-left {
       top: 0;
-      left: 100px;
+      left: 12%;
       z-index: 1;
       width: 50%;
       padding-bottom: 50%;
@@ -90,8 +90,8 @@
     }
 
     &--top-right {
-      top: -76px;
-      right: -50px;
+      top: -10%;
+      right: -8%;
       z-index: 1;
       width: 24%;
       padding-bottom: 24%;
@@ -100,8 +100,8 @@
     }
 
     &--main {
-      top: -10px;
-      right: -550px;
+      top: 4%;
+      right: -73%;
       z-index: 0;
       width: 1000px;
       height: 600px;
