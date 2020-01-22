@@ -5,6 +5,8 @@
   overflow: hidden;
 
   &__container {
+    position: relative;
+
     @include make-container();
   }
 
@@ -14,7 +16,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 60px;
+
+    &-menu {
+      padding: 60px 0;
+    }
   }
 
   &__col {
@@ -31,5 +36,38 @@
     font-size: 14px;
     font-family: $font-openSans-regular;
     line-height: 18px;
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: -20%;
+    left: 60%;
+    width: 20%;
+    padding-bottom: 15%;
+  }
+
+  &__shape {
+    position: absolute;
+    border-radius: 50%;
+
+    &--top {
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 80%;
+      padding-bottom: 80%;
+      background-color: $malibu;
+      opacity: 0.24;
+    }
+
+    &--bottom {
+      top: -5%;
+      left: -10%;
+      z-index: -2;
+      width: 30%;
+      padding-bottom: 30%;
+      background-color: $lightNavy;
+      opacity: 0.86;
+    }
   }
 }
