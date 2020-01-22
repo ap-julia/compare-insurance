@@ -6,18 +6,30 @@
 
   &__container {
     @include make-container();
-    @include make-container-max-widths();
-
-    padding-top: 60px;
   }
 
   &__row {
     @include make-row();
 
-    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+  }
+
+  &__col {
+    max-width: 445px;
   }
 
   &__logo {
     width: 190px;
+  }
+
+  &__text {
+    margin: 5px 0 18px;
+    color: #9a9a9a;
+    font-size: 14px;
+    font-family: $font-openSans-regular;
+    line-height: 18px;
   }
 }

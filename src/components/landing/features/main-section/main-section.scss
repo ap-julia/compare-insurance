@@ -4,10 +4,14 @@
   position: relative;
   justify-content: space-between;
   width: 100%;
-  min-height: 640px;
   background-color: $white;
 
   @include make-row();
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &__info {
     display: flex;
@@ -16,6 +20,7 @@
     justify-content: center;
     width: 40%;
     height: 100%;
+    padding: 110px 0 140px;
   }
 
   &__heading {
@@ -49,6 +54,12 @@
     bottom: 0;
     width: 55%;
     overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+    }
   }
 
   &__img {
@@ -61,7 +72,7 @@
     background-image: url("../../../../assets/img/hero-image.png");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: cover;
+    background-size: contain;
   }
 
   &__shape {

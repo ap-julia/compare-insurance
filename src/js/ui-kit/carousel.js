@@ -28,6 +28,12 @@
     autoplaySpeed: 2000,
     autoplayHoverPause: true,
     items: 1,
-    nav: true,
+    0: {
+      center: true,
+      nav: false,
+    },
+    600: {
+      nav: true,
+    },
   });
 }(jQuery));

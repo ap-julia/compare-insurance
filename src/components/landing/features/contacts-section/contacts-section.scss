@@ -1,13 +1,20 @@
 .contacts-section {
   $root: &;
 
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  padding: 112px 0 132px;
   background-color: $white;
 
   @include make-row();
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 830px;
+    margin: 0 auto;
+    padding: 112px 0 132px;
+  }
 
   &__title {
     margin-bottom: 44px;

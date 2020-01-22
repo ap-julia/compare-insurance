@@ -6,13 +6,17 @@
     max-width: 1180px;
     margin: 0 auto;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       width: 96%;
     }
   }
 
   .layout__header {
     min-height: 152px;
+  }
+
+  .layout__section {
+    max-width: 100%;
   }
 
   .layout__base-wrap-outer {

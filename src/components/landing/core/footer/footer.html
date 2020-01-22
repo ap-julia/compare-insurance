@@ -1,6 +1,6 @@
 <div class="landing-footer">
   <div class=landing-footer__section">
-    <div class="landing-footer__container">
+    <div class="landing-footer__container landing__container">
       <div class="landing-footer__row">
         <div class="landing-footer__col">
           <div class="landing-footer__logo">
@@ -33,17 +33,17 @@
               </a>
             </li>
             <li class="nav-landing__item">
-              <a class="nav-landing__link" href="">
+              <a class="nav-landing__link nav-landing__link--is-current" href="">
                 <span>Contact Us</span>
               </a>
             </li>
           </ul>
+          @include('components/landing/features/social/social.html')
         </nav>
       </div>
     </div>
-    <div class="landing-footer__col">
+    <div class="landing-footer__row">
       @include('components/landing/features/footer-info/footer-info.html')
     </div>
-  </div>
   </div>
 </div>
