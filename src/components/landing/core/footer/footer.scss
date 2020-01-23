@@ -54,12 +54,16 @@
   &__nav {
     @include media-breakpoint-down(sm) {
       align-items: center;
-      padding: 38px 0;
+      padding-top: 38px;
     }
   }
 
   &__social {
     margin-top: 16px;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 38px;
+    }
   }
 
   &__logo {
