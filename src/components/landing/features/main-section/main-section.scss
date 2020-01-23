@@ -22,11 +22,18 @@
     height: 100%;
     padding: 110px 0 140px;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
+      padding: 50px 0 70px;
+    }
+
+    @include media-breakpoint-down(md) {
       align-items: center;
       width: 100%;
-      padding: 38px 0;
       text-align: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 38px 0;
     }
   }
 
@@ -76,10 +83,10 @@
     width: 55%;
     overflow: hidden;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       position: relative;
       width: 100%;
-      min-height: 500px;
+      padding-bottom: 80%;
     }
   }
 
@@ -101,7 +108,7 @@
     border-radius: 50%;
 
     &--top-left {
-      top: 0;
+      top: -3%;
       left: 12%;
       z-index: 1;
       width: 50%;
@@ -124,11 +131,21 @@
       top: 4%;
       right: -73%;
       z-index: 0;
-      width: 1000px;
-      height: 600px;
+      width: 130%;
+      height: 90%;
       background-color: $lightNavy;
       border-radius: 30%;
       transform: rotate(-20deg);
+    }
+
+    &--bottom-left {
+      top: 80%;
+      left: 0;
+      z-index: 1;
+      width: 50%;
+      padding-bottom: 50%;
+      background-color: $malibu;
+      opacity: 0.5;
     }
   }
 }
