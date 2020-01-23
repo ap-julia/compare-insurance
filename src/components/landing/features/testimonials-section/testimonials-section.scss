@@ -66,11 +66,11 @@
 
   &__bg {
     position: absolute;
-    bottom: -7%;
-    left: -3%;
+    bottom: -9%;
+    left: -4%;
     z-index: 1;
-    width: 20%;
-    padding-bottom: 15%;
+    width: 25%;
+    padding-bottom: 20%;
 
     @include media-breakpoint-down(sm) {
       display: none;
@@ -92,11 +92,11 @@
     }
 
     &--bottom {
-      top: 10%;
-      right: 10%;
+      top: 15%;
+      right: 13%;
       z-index: -2;
-      width: 30%;
-      padding-bottom: 30%;
+      width: 25%;
+      padding-bottom: 25%;
       background-color: $lightNavy;
       opacity: 0.86;
     }

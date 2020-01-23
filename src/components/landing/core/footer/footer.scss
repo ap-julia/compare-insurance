@@ -58,6 +58,10 @@
     }
   }
 
+  &__social {
+    margin-top: 16px;
+  }
+
   &__logo {
     width: 190px;
 
@@ -91,7 +95,7 @@
 
   &__bg {
     position: absolute;
-    bottom: -20%;
+    bottom: -17%;
     left: 60%;
     width: 20%;
     padding-bottom: 15%;
@@ -109,15 +113,15 @@
       top: 0;
       left: 0;
       z-index: -1;
-      width: 80%;
-      padding-bottom: 80%;
+      width: 100%;
+      padding-bottom: 100%;
       background-color: $malibu;
       opacity: 0.24;
     }
 
     &--bottom {
       top: -5%;
-      left: -10%;
+      left: -5%;
       z-index: -2;
       width: 30%;
       padding-bottom: 30%;
