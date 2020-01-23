@@ -4,6 +4,7 @@
   position: relative;
   justify-content: space-between;
   width: 100%;
+  overflow: hidden;
   background-color: $white;
 
   @include make-row();
@@ -86,7 +87,8 @@
     @include media-breakpoint-down(md) {
       position: relative;
       width: 100%;
-      padding-bottom: 80%;
+      padding-bottom: 68%;
+      overflow: visible;
     }
   }
 
@@ -115,6 +117,10 @@
       padding-bottom: 50%;
       background-color: $malibu;
       opacity: 0.5;
+
+      @include media-breakpoint-down(md) {
+        left: 0;
+      }
     }
 
     &--top-right {
@@ -125,6 +131,13 @@
       padding-bottom: 24%;
       background-color: $malibu;
       opacity: 0.65;
+
+      @include media-breakpoint-down(md) {
+        top: 0;
+        right: -3%;
+        width: 35%;
+        padding-bottom: 35%;
+      }
     }
 
     &--main {
@@ -146,6 +159,10 @@
       padding-bottom: 50%;
       background-color: $malibu;
       opacity: 0.5;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 }
