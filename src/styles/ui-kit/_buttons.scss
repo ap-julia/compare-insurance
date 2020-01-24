@@ -7,6 +7,7 @@
   color: $white;
   font-size: 14px;
   font-family: $font-montserrat-semi;
+  text-decoration: none;
   background-color: $blue;
   border: none;
   border-radius: 5px;
@@ -36,6 +37,21 @@
     color: $blue;
     background-color: $white;
     border: 1px solid $blue;
+  }
+
+  //for landing
+  &--accent {
+    min-width: 200px;
+    padding: 12px 32px;
+    font-size: 17px;
+    font-family: $font-montserrat-semi;
+    letter-spacing: 1.36px;
+    background-color: $malibu;
+    border-radius: 23px;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+    }
   }
 
   &--uppercase {

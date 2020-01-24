@@ -1,0 +1,65 @@
+$transition: 0.5s;
+
+.advantage-cards {
+  $root: &;
+
+  display: flex;
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    &:first-of-type {
+      flex-shrink: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: $white;
+      box-shadow: $boxShadowLanding;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-grow: 1;
+      padding: 8px;
+      text-align: left;
+
+      &:hover {
+        background-color: initial;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__img {
+    width: 21px;
+    height: 21px;
+    margin-right: 12px;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-family: $font-montserrat-semi;
+    letter-spacing: 0.68px;
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 13px;
+      line-height: 1;
+      letter-spacing: 0.52px;
+    }
+  }
+}

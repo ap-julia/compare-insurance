@@ -1,0 +1,104 @@
+.testimonials-section {
+  $root: &;
+
+  position: relative;
+  width: 100%;
+  padding: 140px 0 130px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 70px 0 80px;
+  }
+
+  &__title {
+    margin-bottom: 44px;
+    font-size: 31px;
+    font-family: $font-montserrat-bold;
+    letter-spacing: 0;
+    text-align: center;
+
+    @include media-breakpoint-down(xxs) {
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__carousel {
+    max-width: 94%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-family: $font-openSans-regular;
+    line-height: 33px;
+    letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-family: $font-montserrat-regular;
+    line-height: 26px;
+    letter-spacing: 0.16px;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 12px;
+      line-height: 26px;
+    }
+
+    &--bold {
+      font-family: $font-montserrat-semi;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: -9%;
+    left: -4%;
+    z-index: 1;
+    width: 25%;
+    padding-bottom: 20%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    border-radius: 50%;
+
+    &--top {
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 80%;
+      padding-bottom: 80%;
+      background-color: $malibu;
+      opacity: 0.24;
+    }
+
+    &--bottom {
+      top: 15%;
+      right: 13%;
+      z-index: -2;
+      width: 25%;
+      padding-bottom: 25%;
+      background-color: $lightNavy;
+      opacity: 0.86;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.advantage-section {
+  $root: &;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: -30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 590px;
+    padding: 110px 0 130px;
+
+    @include media-breakpoint-down(sm) {
+      align-items: center;
+      padding: 50px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 31px;
+    font-family: $font-montserrat-bold;
+    letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      max-width: 80%;
+      font-size: 24px;
+      letter-spacing: 0.48px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 80%;
+    font-size: 18px;
+    font-family: $font-openSans-regular;
+    line-height: 24px;
+    letter-spacing: 0;
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__cards {
+    margin-top: 36px;
+  }
+
+  &__btn {
+    margin-top: 56px;
+    @include media-breakpoint-down(xxs) {
+      display: none;
+    }
+  }
+
+  &__bg {
+    position: relative;
+    width: 380px;
+
+    @include media-breakpoint-down(xs) {
+      width: 180px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    height: 665px;
+    background-image: url("../../../../assets/img/phone.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      top: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 180px;
+      height: 350px;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    border-radius: 50%;
+
+    &--top {
+      top: 38%;
+      left: 3%;
+      z-index: -1;
+      width: 18%;
+      padding-bottom: 18%;
+      background-color: $malibu;
+      opacity: 0.35;
+    }
+
+    &--bottom {
+      top: 43%;
+      left: -10%;
+      z-index: -2;
+      width: 50%;
+      padding-bottom: 50%;
+      background-color: $lightNavy;
+    }
+  }
+}

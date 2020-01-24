@@ -1,0 +1,58 @@
+.header-info {
+  $root: &;
+
+  height: 40px;
+  padding: 12px 0;
+  background-color: $lightNavy;
+
+  &__list {
+    @include make-row();
+
+    justify-content: flex-end;
+
+    @include media-breakpoint-down(xxs) {
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    &--phone {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+    color: $white;
+    font-size: 14px;
+    font-family: $font-montserrat-semi;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+
+    @include media-breakpoint-down(xxs) {
+      padding-left: 8px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:not(:last-of-type) {
+      padding-right: 22px;
+      border-right: 2px solid #7580a8;
+
+      @include media-breakpoint-down(xxs) {
+        padding-right: 8px;
+      }
+    }
+  }
+}

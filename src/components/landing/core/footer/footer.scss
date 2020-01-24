@@ -1,0 +1,136 @@
+.landing-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__row {
+    @include make-row();
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      flex-flow: column-reverse;
+      align-items: center;
+    }
+
+    &-menu {
+      padding: 60px 0;
+
+      @include media-breakpoint-down(sm) {
+        padding: 50px 0;
+      }
+    }
+  }
+
+  &__col {
+    max-width: 445px;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--nav {
+      @include media-breakpoint-down(sm) {
+        align-items: center;
+
+        .nav-landing__item {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include media-breakpoint-down(sm) {
+      align-items: center;
+      padding-top: 38px;
+    }
+  }
+
+  &__social {
+    margin-top: 16px;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 38px;
+    }
+  }
+
+  &__logo {
+    width: 190px;
+
+    &--desktop {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    margin: 5px 0 18px;
+    color: #9a9a9a;
+    font-size: 14px;
+    font-family: $font-openSans-regular;
+    line-height: 18px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 36px;
+      text-align: center;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: -17%;
+    left: 60%;
+    width: 20%;
+    padding-bottom: 15%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    border-radius: 50%;
+
+    &--top {
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      padding-bottom: 100%;
+      background-color: $malibu;
+      opacity: 0.24;
+    }
+
+    &--bottom {
+      top: -5%;
+      left: -5%;
+      z-index: -2;
+      width: 30%;
+      padding-bottom: 30%;
+      background-color: $lightNavy;
+      opacity: 0.86;
+    }
+  }
+}

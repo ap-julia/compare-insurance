@@ -1,0 +1,46 @@
+.landing-header {
+  $root: &;
+
+  position: fixed;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: inherit;
+  background-color: $white;
+  box-shadow: $boxShadowLanding;
+
+  &__container {
+    min-height: 112px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 80px;
+    }
+  }
+
+  &__row {
+    @include make-row();
+
+    align-items: center;
+    justify-content: space-between;
+    min-height: inherit;
+  }
+
+  &__logo {
+    width: 19%;
+    min-width: 270px;
+
+    @include media-breakpoint-down(sm) {
+      width: 30%;
+      min-width: 195px;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: auto;
+    }
+  }
+}

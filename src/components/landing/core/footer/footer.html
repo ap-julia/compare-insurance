@@ -1,0 +1,58 @@
+<div class="landing-footer">
+  <div class=landing-footer__section">
+    <div class="landing-footer__container landing__container">
+      <div class="landing-footer__row landing-footer__row-menu">
+        <div class="landing-footer__col">
+          <div class="landing-footer__logo landing-footer__logo--desktop">
+            @include('components/landing/features/logo/logo.html')
+          </div>
+          <p class="landing-footer__text">Compare Insurance is owned & operated by Savington International Insurance Brokers LLC, licensed and regulated by the United Arab Emirates Insurance Authority Registration Number 202.
+          </p>
+          <a href="tel:800784866" class="btn btn--uppercase btn--accent">
+            <svg class="header-info__icon header-info__icon--phone">
+              <use xlink:href="#phone"/>
+            </svg>
+            <span>+800 784 866</span>
+          </a>
+        </div>
+        <nav class="landing-footer__col landing-footer__col--nav">
+          <div class="landing-footer__logo landing-footer__logo--mobile">
+            @include('components/landing/features/logo/logo.html')
+          </div>
+          <ul class="landing-footer__nav nav-landing__list nav-landing__list--vertical">
+            <li class="nav-landing__item">
+              <a class="nav-landing__link" href="">
+                <span>My account</span>
+              </a>
+            </li>
+            <li class="nav-landing__item">
+              <a class="nav-landing__link" href="">
+                <span>PRODUCTS</span>
+              </a>
+            </li>
+            <li class="nav-landing__item">
+              <a class="nav-landing__link" href="">
+                <span>About Us</span>
+              </a>
+            </li>
+            <li class="nav-landing__item">
+              <a class="nav-landing__link nav-landing__link--is-current" href="">
+                <span>Contact Us</span>
+              </a>
+            </li>
+          </ul>
+          <div class="landing-footer__social">
+            @include('components/landing/features/social/social.html')
+          </div>
+        </nav>
+      </div>
+      <div class="landing-footer__bg">
+        <div class="landing-footer__shape landing-footer__shape--top"></div>
+        <div class="landing-footer__shape landing-footer__shape--bottom"></div>
+      </div>
+    </div>
+    <div class="landing-footer__row">
+      @include('components/landing/features/footer-info/footer-info.html')
+    </div>
+  </div>
+</div>
